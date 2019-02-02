@@ -63,3 +63,6 @@ typings/
 
 # webpack build folder
 dist/
+
+# db file
+users.json*
