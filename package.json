@@ -1,0 +1,24 @@
+{
+  "name": "fivem-housing",
+  "version": "0.1.0",
+  "description": "housing script for GTAV Modification Framework FiveM.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vecchiotom/Fivem-Housing.git"
+  },
+  "keywords": [
+    "house",
+    "flat",
+    "fivem",
+    "gtav"
+  ],
+  "author": "IceHax",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vecchiotom/Fivem-Housing/issues"
+  },
+  "homepage": "https://github.com/vecchiotom/Fivem-Housing#readme"
+}
