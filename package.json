@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/vecchiotom/Fivem-Housing#readme",
   "dependencies": {
-    "raven": "^2.6.4"
+    "deserialize-error": "0.0.3",
+    "raven": "^2.6.4",
+    "serialize-error": "^3.0.0"
   }
 }

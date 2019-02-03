@@ -1,1 +1,5 @@
-console.log('client does run');
+const sentry = require('./errortracking.js');
+
+sentry.TrackExceptions(() => {
+    console.log('client does run');
+})
