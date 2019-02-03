@@ -2,7 +2,8 @@ const fs = require("fs")
 const path = require("path")
 const resourcePath = global.GetResourcePath ?
 	global.GetResourcePath(global.GetCurrentResourceName()):
-	__dirname
+    __dirname
+//const resourcePath = __dirname;
 const safepath = url => path.join(resourcePath, url)
 
 function fileExistsSync (filepath) { // from https://github.com/scottcorgan/file-exists, all credits to scottcorgan. the license can be found at https://github.com/scottcorgan/file-exists/blob/master/LICENSE
@@ -56,31 +57,31 @@ class Database {
 
 var database;
 
-function OpenDB(file,cb) {
+function OpenDB(file,cb,...arg) {
     setImmediate(()=>{
         database = new Database(file);
-        cb();
+        cb(...arg);
     })
 }
 
-function GetUser(id,cb) {
+function GetUser(id,cb,...arg) {
     setImmediate(()=>{
         var result = database.GetUser(id);
-        cb(result);
+        cb(result,...arg);
     })
 }
 
-function InsertUser(user,cb) {
+function InsertUser(user,cb,...arg) {
     setImmediate(()=>{
         database.InsertUser(user);
-        cb();
+        cb(...arg);
     })
 }
 
-function UpdateUser(id, update, cb) {
+function UpdateUser(id, update, cb,...arg) {
     setImmediate(()=>{
         database.UpdateUser(id, update);
-        cb();
+        cb(...arg);
     })
 }
 

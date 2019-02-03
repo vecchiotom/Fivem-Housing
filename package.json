@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/vecchiotom/Fivem-Housing/issues"
   },
-  "homepage": "https://github.com/vecchiotom/Fivem-Housing#readme"
+  "homepage": "https://github.com/vecchiotom/Fivem-Housing#readme",
+  "dependencies": {
+    "raven": "^2.6.4"
+  }
 }

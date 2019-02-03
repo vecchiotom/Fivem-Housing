@@ -1,5 +1,6 @@
 const db = require('./db.js')
+const sentry = require('./errortracking.js')
 
-db.OpenDB("users",()=>{
-    console.log('^4[Fivem-Housing] Resource Started, Database Loaded!');
+db.OpenDB("users",sentry.TrackExceptions,()=>{
+    console.log('[^4Fivem-Housing^7] Resource Started, Database Loaded!');
 })
