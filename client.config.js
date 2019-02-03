@@ -13,6 +13,6 @@ module.exports = {
   },
   context: path.resolve(__dirname, 'src'),
   optimization: {
-    minimize: true,
+    minimize: false,
   },
 };
