@@ -14,6 +14,9 @@ function DrawHelpText(text, loop, beep, duration) {
 
 sentry.TrackExceptions(() => {
     console.log('client does run');
+    for (let i = 0; i < houses.length; i++)
+        if (houses[i].ipl) RequestIpl(houses[i].ipl);
+
     setTick(() => {
         sentry.TrackExceptions(() => {
             const Pcoords = GetEntityCoords(PlayerPedId(), true);
@@ -36,6 +39,6 @@ sentry.TrackExceptions(() => {
 })
 setImmediate(()=>{
     RegisterCommand("tp", ()=>{
-        SetEntityCoords(PlayerPedId(), 373.023, 416.105, 145.7006, 0, 0, 0, true)
+        SetEntityCoords(PlayerPedId(), -787.0961, 315.815, 187.9135, 0, 0, 0, true)
     }, false)
 })
