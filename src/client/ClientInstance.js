@@ -1,0 +1,5 @@
+class ClientInstance {
+    constructor(entity) {
+        
+    }
+}

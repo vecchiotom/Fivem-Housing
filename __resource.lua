@@ -6,5 +6,5 @@ client_script 'dist/client.js'
 dependency 'yarn'
 dependency 'webpack'
 
-webpack_config 'server.config.js'
 webpack_config 'client.config.js'
+webpack_config 'server.config.js'

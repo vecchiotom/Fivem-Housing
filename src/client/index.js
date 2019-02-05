@@ -1,5 +1,41 @@
 const sentry = require('./errortracking.js');
+const houses = require("./coords.js")
+var DrawingHelp = false
+
+function Distance(x1, x2, y1, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
+}
+
+function DrawHelpText(text, loop, beep, duration) {
+    AddTextEntry("HELP_TEXT", text)
+    BeginTextCommandDisplayHelp("HELP_TEXT")
+    EndTextCommandDisplayHelp(0, loop, beep, duration)
+}
 
 sentry.TrackExceptions(() => {
     console.log('client does run');
+    setTick(() => {
+        sentry.TrackExceptions(() => {
+            const Pcoords = GetEntityCoords(PlayerPedId(), true);
+            for (let index = 0; index < houses.length; index++) {
+                DrawMarker(1, houses[index].coords.x, houses[index].coords.y, houses[index].coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.001, 1.0001, 0.5001, 0, 0, 255, 200, 0, 0, 0, 0)
+                let distance = Distance(Pcoords[0], houses[index].coords.x, Pcoords[1], houses[index].coords.y)
+                if (distance < 1.2) {
+                    if(!DrawingHelp) {
+                        DrawHelpText("Press ~INPUT_PICKUP~ to leave the building",false,true,5000);
+                        DrawingHelp = true
+                        setTimeout(() => DrawingHelp=false,5000)
+                    }
+                    
+                    if(IsControlJustReleased(0, 38))
+                        window.exports['spawnmanager']['forceRespawn']()
+                }
+            }
+        })
+    })
+})
+setImmediate(()=>{
+    RegisterCommand("tp", ()=>{
+        SetEntityCoords(PlayerPedId(), 373.023, 416.105, 145.7006, 0, 0, 0, true)
+    }, false)
 })

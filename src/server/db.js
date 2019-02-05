@@ -67,7 +67,7 @@ function OpenDB(file,cb,...arg) {
 function GetUser(id,cb,...arg) {
     setImmediate(()=>{
         var result = database.GetUser(id);
-        cb(result,...arg);
+        cb(...arg, result);
     })
 }
 
