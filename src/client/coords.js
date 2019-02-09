@@ -70,7 +70,7 @@ module.exports = [{
     {
         name: "Modern 1 Apartment",
         ipl: "apa_v_mp_h_01_a",
-        coords: new Vector3(-786.8663, 315.7642, 217.6385)
+        coords: new Vector3(-786.8663, 315.7642, 217.6386)
     },
     {
         name: "Modern 2 Apartment",
@@ -100,7 +100,7 @@ module.exports = [{
     {
         name: "Vibrant 1 Apartment",
         ipl: "apa_v_mp_h_03_a",
-        coords: new Vector3(-786.6245, 315.6175, 217.6385)
+        coords: new Vector3(-786.6245, 315.6175, 217.6386)
     },
     {
         name: "Vibrant 2 Apartment",
@@ -115,7 +115,7 @@ module.exports = [{
     {
         name: "Sharp 1 Apartment",
         ipl: "apa_v_mp_h_04_a",
-        coords: new Vector3(-787.0902, 315.7039, 217.6384)
+        coords: new Vector3(-787.0902, 315.7039, 217.6386)
     },
     {
         name: "Sharp 2 Apartment",
@@ -145,7 +145,7 @@ module.exports = [{
     {
         name: "Seductive 1 Apartment",
         ipl: "apa_v_mp_h_06_a",
-        coords: new Vector3(-787.1423, 315.6943, 217.6384)
+        coords: new Vector3(-787.1423, 315.6943, 217.6386)
     },
     {
         name: "Seductive 2 Apartment",
@@ -160,7 +160,7 @@ module.exports = [{
     {
         name: "Regal 1 Apartment",
         ipl: "apa_v_mp_h_07_a",
-        coords: new Vector3(-787.029, 315.7113, 217.6385)
+        coords: new Vector3(-787.029, 315.7113, 217.6386)
     },
     {
         name: "Regal 2 Apartment",
@@ -175,7 +175,7 @@ module.exports = [{
     {
         name: "Aqua 1 Apartment",
         ipl: "apa_v_mp_h_08_a",
-        coords: new Vector3(-786.9469, 315.5655, 217.6383)
+        coords: new Vector3(-786.9469, 315.5655, 217.6386)
     },
     {
         name: "Aqua 2 Apartment",

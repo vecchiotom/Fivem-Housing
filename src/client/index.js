@@ -21,7 +21,7 @@ sentry.TrackExceptions(() => {
         sentry.TrackExceptions(() => {
             const Pcoords = GetEntityCoords(PlayerPedId(), true);
             for (let index = 0; index < houses.length; index++) {
-                DrawMarker(1, houses[index].coords.x, houses[index].coords.y, houses[index].coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.001, 1.0001, 0.5001, 0, 0, 255, 200, 0, 0, 0, 0)
+                DrawMarker(0, houses[index].coords.x, houses[index].coords.y, houses[index].coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 204, 255, 0, 50, true, true, 2, null, null, false)
                 let distance = Distance(Pcoords[0], houses[index].coords.x, Pcoords[1], houses[index].coords.y)
                 if (distance < 1.2) {
                     if(!DrawingHelp) {
